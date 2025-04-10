@@ -75,3 +75,88 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+/* Hero Section / Slider Style */
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 6em 1em;
+}
+
+.hero-slide .verse {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  max-width: 90%;
+}
+
+/* Section Styles */
+.section {
+  padding: 3em 1em;
+}
+
+.section-dark {
+  background-color: #111;
+  color: #f9f9f9;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+.section .content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  background-color: #0073aa;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  margin: 0.5em 0;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #005177;
+  text-decoration: none;
+}
+
+/* Welcome Text */
+.welcome-text {
+  font-size: 1.3em;
+  margin-bottom: 2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .hero-slide {
+    padding: 4em 1em;
+  }
+
+  .hero-slide .verse {
+    font-size: 1em;
+  }
+}

@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title or "Christ's Church of Starke" }}</title>
+    <link rel="icon" href="/favicon.ico" />
+    {% if file_exists('/css/style.css') %}
     <link rel="stylesheet" href="/css/style.css" />
+    {% endif %}
   </head>
   <body>
     <!-- Top bar -->
@@ -22,16 +25,16 @@
 
     <!-- Navigation -->
     <nav class="main-nav">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/our-pastor">Our Pastor</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/missionaries">Our Missionaries</a></li>
-        <li><a href="/sermons">Sermons</a></li>
-        <li><a href="/books">Books</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <li><a href="/home/">Home</a></li>
+    <li><a href="/our-pastor/">Our Pastor</a></li>
+    <li><a href="/contact-us/">Contact Us</a></li>
+    <li><a href="/about-us/">About Us</a></li>
+    <li><a href="/our-missionaries/">Our Missionaries</a></li>
+    <li><a href="/audio/">Audio</a></li>
+    <li><a href="/books/">Books</a></li>
+  </ul>
+</nav>
 
     <!-- Hero section -->
     <section class="hero">
@@ -44,7 +47,7 @@
     </section>
 
     <!-- Main content -->
-    <main class="content">
+    <main class="content container">
       {{ content | safe }}
     </main>
 
