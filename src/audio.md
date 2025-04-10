@@ -1,6 +1,6 @@
 ---
 title: Sermons
-layout: base.njk
+layout: layouts/base.njk
 ---
 
 # Sermons
