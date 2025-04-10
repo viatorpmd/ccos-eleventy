@@ -1,6 +1,6 @@
 ---
 title: Welcome to Christ's Church of Starke
-layout: layouts/base.njk
+layout: base.njk
 ---
 
 # Welcome
