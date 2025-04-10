@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("date", (value, format = "MMMM dd, yyyy") => {
+    if (!value) return '';
     return DateTime.fromJSDate(new Date(value)).toFormat(format);
   });
 
