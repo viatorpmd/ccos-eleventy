@@ -1,53 +1,58 @@
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
+    <title>{{ title or "Christ's Church of Starke" }}</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <header>
-      <div class="header-top">
-        <p>Pastor Lester Austin • <a href="mailto:BroLester@CCofStarke.com">BroLester@CCofStarke.com</a></p>
+    <!-- Top bar -->
+    <div class="top-bar">
+      <span>Pastor Lester Austin • <a href="mailto:BroLester@CCofStarke.com">BroLester@CCofStarke.com</a></span>
+    </div>
+
+    <!-- Header with logo/title -->
+    <header class="site-header">
+      <div class="logo-title-container">
+        <img src="/images/logo.png" alt="Church Logo" class="church-logo" />
+        <h1 class="site-title">Christ’s Church of Starke</h1>
       </div>
-      <div class="site-logo">
-        <img src="/images/logo.png" alt="Church Logo">
-        <h1>Christ’s Church of Starke</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/our-pastor/">Our Pastor</a></li>
-          <li><a href="/contact/">Contact Us</a></li>
-          <li><a href="/about/">About Us</a></li>
-          <li><a href="/missionaries/">Our Missionaries</a></li>
-          <li><a href="/audio/">Audio</a></li>
-          <li><a href="/sermons/">Sermons</a></li>
-          <li><a href="/books/">Books</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <main>
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/our-pastor">Our Pastor</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/missionaries">Our Missionaries</a></li>
+        <li><a href="/sermons">Sermons</a></li>
+        <li><a href="/books">Books</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <blockquote>
+          <p>Faithful is he that calleth you, who also will do it. -</p>
+          <p><strong>1 Thessalonians 5:24</strong></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Main content -->
+    <main class="content">
       {{ content | safe }}
     </main>
 
-    <footer>
-      <p>&copy; {{ "now" | date("yyyy") }} Christ’s Church of Starke. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; {{ "now" | date("%Y") }} Christ’s Church of Starke. All rights reserved.</p>
     </footer>
-
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
   </body>
 </html>
+{% endraw %}
