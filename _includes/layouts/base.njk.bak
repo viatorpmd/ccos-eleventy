@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Weekly Service Times: Sunday Morning 10:30am (Any special weeknight service will begin at 7:30pm) Welcome to Christ’s Church of Starke. We trust that today you are enjoying all the riches in Christ!" />
+    <meta name="robots" content="max-image-preview:large" />
+    <link rel="canonical" href="https://ccofstarke.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Christ’s Church of Starke" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - Christ’s Church of Starke" />
+    <meta property="og:description" content="Weekly Service Times: Sunday Morning 10:30am. We trust that today you are enjoying all the riches in Christ!" />
+    <meta property="og:url" content="https://ccofstarke.com/" />
+    <meta property="og:image" content="https://ccofstarke.com/wp-content/uploads/Logo-white.png" />
+    <meta property="og:image:secure_url" content="https://ccofstarke.com/wp-content/uploads/Logo-white.png" />
+    <meta property="og:image:width" content="1043" />
+    <meta property="og:image:height" content="246" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Home - Christ’s Church of Starke" />
+    <meta name="twitter:description" content="Weekly Service Times: Sunday Morning 10:30am. We trust that today you are enjoying all the riches in Christ!" />
+    <meta name="twitter:image" content="https://ccofstarke.com/wp-content/uploads/Logo-white.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Christ's Church of Starke</a></h1>
+      <nav>
+        <a href="/">Home</a> |
+        <a href="/our-pastor/">Our Pastor</a> |
+        <a href="/contact-us/">Contact Us</a> |
+        <a href="/about-us/">About Us</a> |
+        <a href="/our-missionaries/">Our Missionaries</a> |
+        <a href="/audio/">Sermons</a> |
+        <a href="/books/">Books</a>
+      </nav>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Christ's Church of Starke</p>
+    </footer>
+  </body>
+</html>
