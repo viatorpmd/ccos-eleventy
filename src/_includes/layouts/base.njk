@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <div id="header" style="background-color:#000; color:#fff; padding: 5px 0; text-align:center; font-size: 0.9rem;">
-    <strong>Pastor Lester Austin • <a href="mailto:BroLester@CCofStarke.com" style="color:#fff; text-decoration:none;">BroLester@CCofStarke.com</a></strong>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <p>Pastor Lester Austin • <a href="mailto:BroLester@CCofStarke.com">BroLester@CCofStarke.com</a></p>
+      </div>
+      <div class="site-logo">
+        <img src="/images/logo.png" alt="Church Logo">
+        <h1>Christ’s Church of Starke</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/our-pastor/">Our Pastor</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/missionaries/">Our Missionaries</a></li>
+          <li><a href="/audio/">Audio</a></li>
+          <li><a href="/sermons/">Sermons</a></li>
+          <li><a href="/books/">Books</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <div id="logo-nav" style="background-color:#555; color:#fff; display:flex; align-items:center; justify-content:space-between; padding:10px 5%;">
-    <img src="/images/logo.png" alt="Church Logo" style="height:60px;">
-    <h1 style="margin:0; font-size:1.8rem;">Christ’s Church of Starke</h1>
-  </div>
+    <main>
+      {{ content | safe }}
+    </main>
 
-  <nav style="background-color:#000; padding: 10px 0; text-align:center;">
-    <a href="/" style="color:white; text-decoration:none; margin:0 10px; font-weight:bold;">Home</a>
-    <a href="/pastor/" style="color:white; text-decoration:none; margin:0 10px; font-weight:bold;">Our Pastor</a>
-    <a href="/contact/" style="color:white; text-decoration:none; margin:0 10px; font-weight:bold;">Contact Us</a>
-    <a href="/about/" style="color:white; text-decoration:none; margin:0 10px; font-weight:bold;">About Us</a>
-    <a href="/missionaries/" style="color:white; text-decoration:none; margin:0 10px; font-weight:bold;">Our Missionaries</a>
-    <a href="/sermons/" style="color:white; text-decoration:none; margin:0 10px; font-weight:bold;">Sermons</a>
-    <a href="/books/" style="color:white; text-decoration:none; margin:0 10px; font-weight:bold;">Books</a>
-  </nav>
+    <footer>
+      <p>&copy; {{ "now" | date("yyyy") }} Christ’s Church of Starke. All rights reserved.</p>
+    </footer>
 
-  <main style="padding: 30px; max-width: 1000px; margin: auto;">
-    {{ content | safe }}
-  </main>
-
-  <footer style="background-color:#000; color:#fff; text-align:center; padding:15px 0;">
-    &copy; {{ "now" | date("%Y") }} Christ’s Church of Starke. All rights reserved.
-  </footer>
-</body>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
