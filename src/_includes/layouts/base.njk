@@ -1,4 +1,37 @@
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or "Christ's Church of Starke" }}</title>
+
+  <meta name="description" content="{{ description or 'Welcome to Christ’s Church of Starke. Learn more about our church, sermons, and beliefs.' }}">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+</head>
+
+<body>
+  <header>
+    <h1>Christ’s Church of Starke</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/audio/">Sermons</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ "now" | date("YYYY") }} Christ’s Church of Starke. All rights reserved.</p>
+  </footer>
+</body>
+</html>---
 title: Home
 ---
 
