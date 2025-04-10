@@ -6,13 +6,13 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(new Date(value)).toFormat(format);
   });
 
-  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/static");
 
   return {
     dir: {
       input: "src",
       includes: "_includes",
-      layouts: "_includes/layouts",
+      layouts: "layouts",
       output: "_site"
     }
   };
