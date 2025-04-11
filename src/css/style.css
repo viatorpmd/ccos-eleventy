@@ -160,3 +160,70 @@ nav ul li a:hover {
     font-size: 1em;
   }
 }
+
+/* Footer Styling */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2em 1em;
+  font-size: 0.9em;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  border-bottom: 2px solid gold;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+  padding: 1em;
+}
+
+.footer-left h2 {
+  font-size: 1.4em;
+  color: gold;
+  margin-bottom: 0.5em;
+}
+
+.footer-left p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.footer-links li {
+  margin-bottom: 0.5em;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: gold;
+}
+
+.footer-contact {
+  font-size: 0.95em;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 0.85em;
+  color: #aaa;
+}

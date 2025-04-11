@@ -51,7 +51,33 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p>&copy; {{ "now" | date("%Y") }} Christ’s Church of Starke. All rights reserved.</p>
+      <div class="footer-container">
+        <div class="footer-left">
+          <h2>Christ’s Church of Starke</h2>
+          <p>
+            We are an independent body of believers committed to walking in the old paths
+            and lifting up the name of Jesus Christ, exalting His Word above all else.
+          </p>
+        </div>
+        <div class="footer-right">
+          <ul class="footer-links">
+            <li><a href="{{ '/' | url }}">Home</a></li>
+            <li><a href="{{ '/our-pastor/' | url }}">Our Pastor</a></li>
+            <li><a href="{{ '/contact-us/' | url }}">Contact Us</a></li>
+            <li><a href="{{ '/about-us/' | url }}">About Us</a></li>
+            <li><a href="{{ '/our-missionaries/' | url }}">Our Missionaries</a></li>
+            <li><a href="{{ '/audio/' | url }}">Audio</a></li>
+            <li><a href="{{ '/books/' | url }}">Books</a></li>
+          </ul>
+          <p class="footer-contact">
+            Email: <a href="mailto:BroLester@CCofStarke.com">BroLester@CCofStarke.com</a><br>
+            Address: 507 W Call St, Starke, FL 32091
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ "now" | date("%Y") }} Christ’s Church of Starke. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
