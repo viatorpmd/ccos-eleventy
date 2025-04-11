@@ -6,7 +6,8 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(new Date(value)).toFormat(format);
   });
 
-  eleventyConfig.addPassthroughCopy("src/static");
+  eleventyConfig.addPassthroughCopy("src/css"); 
+  // Ensures CSS files are copied to _site so they load correctly
 
   return {
     dir: {
