@@ -1,9 +1,11 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: main
 
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
+media_library:
+  name: uploadcare
 
 collections:
   - name: "pages"
@@ -14,3 +16,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "src/index.njk"
+        label: "Homepage Content"
+        name: "home"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Message", name: "hero", widget: "text" }

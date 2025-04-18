@@ -254,3 +254,153 @@ nav ul li a:hover {
   color: #fff;
   text-decoration: underline;
 }
+
+/* Layout utilities pulled from original about.css */
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.section-container {
+  max-width: 1000px;
+  margin: 24px auto;
+  clear: both;
+  padding: 1rem;
+}
+
+.section-header {
+  grid-column: 1 / -1;
+  padding: 1rem;
+  text-align: center;
+}
+
+.has-background-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* =============================================================================
+   ✝ Legacy WordPress: About Page - Structural Grid & Typography
+   From: about.css
+   ========================================================================== */
+
+/* === Container Utility === */
+.about__container {
+  --background: #1d35b4;
+  --subtle-background: #eff2ff;
+  --text: #000;
+  --text-light: #fff;
+  --accent-1: #1d35b4;
+  --accent-2: #33f078;
+  --nav-background: #fff;
+  --nav-border: transparent;
+  --nav-color: var(--text);
+  --nav-current: var(--accent-1);
+  --gap: 2rem;
+
+  max-width: 1000px;
+  margin: 24px auto;
+  clear: both;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+/* === Two-Column Layout === */
+.has-2-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+}
+
+/* === Grid Column Modifiers === */
+.has-2-columns.is-wider-right {
+  grid-template-columns: 2fr 3fr;
+}
+
+.has-2-columns.is-wider-left {
+  grid-template-columns: 3fr 2fr;
+}
+
+/* === Text Columns === */
+.has-text-columns {
+  columns: 2;
+  column-gap: calc(var(--gap) * 2);
+}
+
+/* === Headers and Padding === */
+.is-section-header {
+  grid-column: 1 / -1;
+  padding: var(--gap) var(--gap) 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* === Background Image Utility === */
+.has-background-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* === Accent and Border Classes === */
+.has-accent-background-color {
+  background-color: var(--accent-2);
+}
+
+.has-transparent-background-color {
+  background-color: transparent;
+}
+
+.has-accent-color {
+  color: var(--accent-2);
+}
+
+.has-border {
+  border: 3px solid currentColor;
+}
+
+.has-subtle-background-color {
+  background-color: var(--subtle-background);
+}
+
+/* === Typography Scale === */
+.about__section {
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+.about__section.is-feature {
+  font-size: 1.6em;
+}
+
+.has-3-columns,
+.has-4-columns {
+  font-size: 1rem;
+}
+
+/* === Utility Flex and Alignments === */
+.aligncenter {
+  text-align: center;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.is-vertically-aligned-top {
+  align-self: start;
+}
+
+.is-vertically-aligned-center {
+  align-self: center;
+}
+
+.is-vertically-aligned-bottom {
+  align-self: end;
+}

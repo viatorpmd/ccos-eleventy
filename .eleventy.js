@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/css"); 
   // Ensures CSS files are copied to _site so they load correctly
+  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
 
   return {
     dir: {
