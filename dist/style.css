@@ -1,0 +1,2 @@
+/* Base styles */\n*, ::before, ::after { box-sizing: border-box; }\nbody { margin: 0; font-family: system-ui, sans-serif; }\n\n/* Example Tailwind output */\n.text-white { color: #fff; }\n.bg-gray-900 { background-color: #111827; }\n.p-4 { padding: 1rem; }\n.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }\n.font-bold { font-weight: 700; }
+body { background: #5a5a5a !important; color: white !important; font-size: 2rem !important; }

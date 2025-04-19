@@ -1,47 +1,70 @@
 ---
-layout: layouts/base.njk
-title: Home
+layout: default
+title: Christ’s Church of Starke
 permalink: /
 eleventyExcludeFromCollections: true
+service_time: Sunday at 11am and 6pm, Wednesday at 7pm
+hero: Welcome to Christ’s Church of Starke, where we aim to know God and make Him known.
+intro: >
+  <p>We are a Bible-believing congregation that gathers weekly to worship, learn, and grow in Christ together. All are welcome.</p>
+article_link: https://ccofstarke.com/welcome-message
+article_title: A Welcome Message from Pastor Lester
+sermon_title: That They Might Know Thee
+transcript_link: https://ccofstarke.com/sermons/111608ampt1-transcript
+audio1: https://ccofstarke.com/audio/111608ampt1.mp3
+audio2: https://ccofstarke.com/audio/111608ampt2.mp3
+verse: And this is life eternal, that they might know thee the only true God
 ---
 
-<section id="hero-slider">
-  <div class="slider-wrapper">
-    <img src="https://ccofstarke.com/wp-content/uploads/slider/cache/9b917b3fab7ab11516d5c67df2da9275/AdobeStock_4187818201-scaled.jpg" alt="Slide 1" />
-    <img src="https://ccofstarke.com/wp-content/uploads/slider/cache/5f54b703c9a4f39c29512ca793bda0c8/AdobeStock_3304503681-scaled.jpg" alt="Slide 2" />
-    <img src="https://ccofstarke.com/wp-content/uploads/slider/cache/1b2e6cf7e77caea756d73af53fb9276f/AdobeStock_1217415841-scaled.jpg" alt="Slide 3" />
+<style>
+  body {
+    background-color: #5a5a5a !important;
+    color: white !important;
+    font-size: 2rem !important;
+    padding: 2rem;
+  }
+</style>
+
+<section id="hero-slider" class="overflow-hidden">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+    <img src="https://ccofstarke.com/wp-content/uploads/slider/cache/9b917b3fab7ab11516d5c67df2da9275/AdobeStock_4187818201-scaled.jpg" alt="Slide 1" class="w-full h-72 object-cover" />
+    <img src="https://ccofstarke.com/wp-content/uploads/slider/cache/5f54b703c9a4f39c29512ca793bda0c8/AdobeStock_3304503681-scaled.jpg" alt="Slide 2" class="w-full h-72 object-cover" />
+    <img src="https://ccofstarke.com/wp-content/uploads/slider/cache/1b2e6cf7e77caea756d73af53fb9276f/AdobeStock_1217415841-scaled.jpg" alt="Slide 3" class="w-full h-72 object-cover" />
   </div>
 </section>
 
-<section id="weekly-service-times">
-  <h2>Weekly Service Times</h2>
-  <p>Sunday Morning 10:30am</p>
-  <p>(Any special weeknight service will begin at 7:30pm)</p>
+<section id="weekly-service-times" class="text-center py-8">
+  <h2 class="text-3xl text-yellow-300 font-bold mb-2">Weekly Service Times</h2>
+  <p class="text-lg">{{ service_time }}</p>
+  <p class="text-sm text-gray-400">(Any special weeknight service will begin at 7:30pm)</p>
 </section>
 
-<section id="welcome-message">
-  <h2>Welcome to Christ’s Church of Starke</h2>
-  <p>We trust that today you are enjoying all the riches in Christ!</p>
+<section id="welcome-message" class="max-w-3xl mx-auto px-4 py-10 text-center space-y-4">
+  <h2 class="text-3xl font-bold text-yellow-400">Welcome to Christ’s Church of Starke</h2>
+  <p class="text-lg">{{ hero }}</p>
+  <div class="text-white text-md leading-relaxed">
+    {{ intro | safe }}
+  </div>
   <p>
-    We would like to share with you an article written nearly 70 years ago that is alarmingly descriptive of the deceptive hour in which we live.
-    We encourage you to read the article prayerfully and share it with others. May it awaken all of us to the urgency of these times.
+    <a href="{{ article_link }}" class="text-blue-400 underline">{{ article_title }}</a>
   </p>
-  <p><a href="https://ccofstarke.com/Site/Ballard.pdf">COUNTERFEITS IN THE LAST DAYS by J. HUDSON BALLARD</a></p>
 </section>
 
-<section id="featured-message">
-  <h3>“The Restitution of All Things”</h3>
-  <p>A message preached in November of 2008 by Brother Lester.</p>
-  <p><a href="https://ccofstarke.com/Site/ROAT.pdf">Read the transcript</a></p>
-  <div class="audio-links">
-    <a href="http://www.ccofstarke.com/audio/111608ampt1.mp3">Audio Message – Part 1</a> |
-    <a href="http://www.ccofstarke.com/audio/111608ampt2.mp3">Audio Message – Part 2</a>
+<section id="featured-message" class="max-w-3xl mx-auto px-4 py-10 space-y-4 text-center">
+  <h3 class="text-2xl font-semibold text-yellow-300">{{ sermon_title }}</h3>
+  <p class="text-gray-300">A message preached in November of 2008 by Brother Lester.</p>
+  <p>
+    <a href="{{ transcript_link }}" class="text-blue-400 underline">Read the transcript</a>
+  </p>
+  <div class="space-x-4">
+    <a href="{{ audio1 }}" class="text-blue-400 underline">Audio Message – Part 1</a>
+    <span class="text-gray-400">|</span>
+    <a href="{{ audio2 }}" class="text-blue-400 underline">Audio Message – Part 2</a>
   </div>
 </section>
 
-<section id="church-info">
-  <h3>Christ’s Church of Starke</h3>
-  <img src="https://ccofstarke.com/wp-content/uploads/homepage-image.png" alt="Church logo" width="300" height="170" />
-  <p><strong>John 17:3</strong><br>
-  And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.</p>
+<section id="church-info" class="text-center py-12">
+  <h3 class="text-2xl font-bold text-yellow-400 mb-4">Christ’s Church of Starke</h3>
+  <img src="https://ccofstarke.com/wp-content/uploads/homepage-image.png" alt="Church logo" class="mx-auto mb-4 w-[300px] h-auto" />
+  <p class="text-xl font-medium text-white"><strong>John 17:3</strong><br />{{ verse }}</p>
 </section>

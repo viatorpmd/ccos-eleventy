@@ -1,19 +1,25 @@
 {
-  "name": "eleventy-site",
+  "name": "ccos-eleventy",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "build:css": "postcss src/css/style.css -o dist/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@tailwindcss/postcss": "^4.1.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.4"
   },
   "dependencies": {
     "luxon": "^3.6.1",
-    "netlify-cms-app": "^2.15.72"
+    "nunjucks": "^3.2.4"
   }
 }

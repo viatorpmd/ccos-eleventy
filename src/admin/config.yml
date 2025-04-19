@@ -2,8 +2,8 @@ backend:
   name: github
   repo: viatorpmd/ccos-eleventy
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  squash_merges: true
+  use_graphql: true
 
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
@@ -11,14 +11,6 @@ media_library:
   name: uploadcare
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "src/pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
   - name: "homepage"
     label: "Homepage"
     files:
@@ -28,3 +20,48 @@ collections:
         fields:
           - { label: "Page Title", name: "title", widget: "string" }
           - { label: "Hero Message", name: "hero", widget: "text" }
+          - { label: "Intro", name: "intro", widget: "markdown" }
+
+  - name: "about"
+    label: "About Page"
+    files:
+      - file: "src/pages/about-us/index.njk"
+        label: "About Us"
+        name: "about"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "missionaries"
+    label: "Our Missionaries"
+    folder: "src/pages/our-missionaries"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Region", name: "region", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Support Link", name: "support", widget: "string" }
+
+  - name: "sermons"
+    label: "Sermons"
+    folder: "src/pages/audio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Speaker", name: "speaker", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "MP3 URL", name: "audio", widget: "string" }
+
+  - name: "footer"
+    label: "Footer Info"
+    files:
+      - file: "src/_data/footer.json"
+        label: "Footer Settings"
+        name: "footer"
+        fields:
+          - { label: "Church Name", name: "church_name", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Copyright", name: "copyright", widget: "string" }
